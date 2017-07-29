@@ -17,7 +17,13 @@
     function callback() {
       //  console.log("OK");
         console.log(xmlhttp.readyState);
+        var target=document.getElementById("state"+xmlhttp.readyState);
+        target.innerHTML=xmlhttp.readyState;
 
+        if(xmlhttp.readyState==4 &&xmlhttp.status==200){
+            document.getElementById("test").innerHTML=
+                 xmlhttp.responseText;   //資料回來了test
+        }
 
 
     }
@@ -25,4 +31,11 @@
 </script>
 
 <input type="button" onclick="test()" value="Click" />
+
+<div id="state0"></div>
+<div id="state1"></div>
+<div id="state2"></div>
+<div id="state3"></div>
+<div id="state4"></div>
+
 <div id="test"></div>
