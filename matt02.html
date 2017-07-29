@@ -8,7 +8,18 @@
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     function  test() {
-        
+
+        xmlhttp.open("GET","test.txt",true);
+        xmlhttp.onreadystatechange=callback;
+        xmlhttp.send();
+    }
+
+    function callback() {
+      //  console.log("OK");
+        console.log(xmlhttp.readyState);
+
+
+
     }
 
 </script>
