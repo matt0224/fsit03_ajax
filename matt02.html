@@ -9,8 +9,9 @@
     }
     function  test() {
 
-        xmlhttp.open("GET","test.txt",true);
-        xmlhttp.onreadystatechange=callback;
+        xmlhttp.open("GET","test.php",true);
+        xmlhttp.setRequestHeader("User_Agent","MATT");
+      //  xmlhttp.onreadystatechange=callback;
         xmlhttp.send();
     }
 
